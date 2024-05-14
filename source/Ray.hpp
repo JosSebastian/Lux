@@ -1,6 +1,6 @@
 #pragma once
 
-#include <glm/glm.hpp>
+#include "Support.hpp"
 
 class Ray
 {
@@ -11,9 +11,8 @@ public:
     Ray();
     Ray(const glm::vec3 &point, const glm::vec3 &direction);
     ~Ray();
-    
+
     void Log();
 
     glm::vec3 At(float time);
-    
 };

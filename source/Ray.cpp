@@ -1,8 +1,5 @@
 #include "Ray.hpp"
 
-#include <iostream>
-#include <string>
-
 Ray::Ray()
     : point(glm::vec3(0.0f)), direction(glm::vec3(0.0f))
 {

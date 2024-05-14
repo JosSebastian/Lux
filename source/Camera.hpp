@@ -6,8 +6,10 @@ class Camera
 {
 public:
     Camera();
-    Camera(glm::vec2 resolution, float fov, Transformation transformation);
+    Camera(const glm::vec2 &resolution, float fov, const Transformation &transformation);
     ~Camera();
+
+    void Log();
 
 private:
     glm::vec2 resolution;

@@ -1,8 +1,5 @@
 #include "Support.hpp"
 
-#include <iostream>
-#include <string>
-
 Transformation::Transformation()
     : translate(glm::vec3(0.0f)), rotate(glm::vec3(0.0f)), scale(glm::vec3(1.0f))
 {
