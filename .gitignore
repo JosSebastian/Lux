@@ -1,0 +1,5 @@
+# Edior Directories
+.vscode
+
+# Build Files
+/build
