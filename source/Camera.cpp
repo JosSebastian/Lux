@@ -24,3 +24,15 @@ void Camera::Log()
 
     transformation.Log();
 }
+
+Ray Camera::CreateRay(const glm::vec2 &pixel)
+{
+
+    glm::vec2 coordinate = glm::vec2((pixel.x + 0.5f) / resolution.x * aspect, (pixel.y + 0.5f) / resolution.y) * 2.0f - 1.0f;
+    coordinate *= glm::vec2(tan(fov.x / 2.0f), tan(fov.y / 2.0f));
+
+    glm::vec3 point = matrix * glm::vec4(0.0f, 0.0f, 0.0f, 1.0f);
+    glm::vec3 direction = matrix * glm::normalize(glm::vec4(coordinate, -1.0f, 0.0f));
+
+    return Ray(point, direction);
+}

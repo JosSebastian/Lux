@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Support.hpp"
+#include "Ray.hpp"
 
 class Camera
 {
@@ -10,6 +11,8 @@ public:
     ~Camera();
 
     void Log();
+
+    Ray CreateRay(const glm::vec2 &pixel);
 
 private:
     glm::vec2 resolution;
