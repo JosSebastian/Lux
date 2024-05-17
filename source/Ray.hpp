@@ -12,7 +12,5 @@ public:
     Ray(const glm::vec3 &point, const glm::vec3 &direction);
     ~Ray();
 
-    void Log();
-
     glm::vec3 At(float time);
 };

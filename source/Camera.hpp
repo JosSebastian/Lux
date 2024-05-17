@@ -10,8 +10,6 @@ public:
     Camera(const glm::vec2 &resolution, float fov, const Transformation &transformation);
     ~Camera();
 
-    void Log();
-
     Ray CreateRay(const glm::vec2 &pixel);
 
 private:
