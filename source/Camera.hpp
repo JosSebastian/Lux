@@ -7,13 +7,15 @@ class Camera
 {
 public:
     Camera();
-    Camera(const glm::vec2 &resolution, float fov, const Transformation &transformation);
+    Camera(int width, int height, float fov, Transformation transformation);
     ~Camera();
 
-    Ray CreateRay(const glm::vec2 &pixel);
+    Ray CreateRay(int x, int y);
 
 private:
-    glm::vec2 resolution;
+    int width;
+    int height;
+
     glm::vec2 fov;
     float aspect;
 

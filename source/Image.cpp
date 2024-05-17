@@ -8,7 +8,7 @@ Image::Image()
 {
 }
 
-Image::Image(int width, int height, const std::string &file)
+Image::Image(int width, int height, std::string file)
     : width(width), height(height), channels(3), pixels(width * height * channels), file(file)
 {
 }

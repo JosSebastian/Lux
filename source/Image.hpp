@@ -6,7 +6,7 @@ class Image
 {
 public:
     Image();
-    Image(int width, int height, const std::string &file);
+    Image(int width, int height, std::string file);
     ~Image();
 
     void Pixel(int x, int y, glm::vec3 color);

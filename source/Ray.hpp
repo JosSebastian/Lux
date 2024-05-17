@@ -9,7 +9,7 @@ public:
     glm::vec3 direction;
 
     Ray();
-    Ray(const glm::vec3 &point, const glm::vec3 &direction);
+    Ray(glm::vec3 point, glm::vec3 direction);
     ~Ray();
 
     glm::vec3 At(float time);

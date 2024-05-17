@@ -12,9 +12,9 @@ public:
     glm::vec3 position;
     glm::vec3 normal;
 
-    const Material *material;
+    Material material;
 
     Hit();
-    Hit(bool hit, float distance, glm::vec3 position, glm::vec3 normal, const Material *material);
+    Hit(bool hit, float distance, glm::vec3 position, glm::vec3 normal, Material material);
     ~Hit();
 };
