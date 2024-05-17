@@ -4,12 +4,12 @@
 #include "Hit.hpp"
 #include "Material.hpp"
 
-class Surface
+class Shape
 {
 public:
-    Surface();
-    Surface(Transformation transformation, Material material);
-    ~Surface();
+    Shape();
+    Shape(Transformation transformation, Material material);
+    ~Shape();
 
     virtual Hit Intersect(Ray ray, float min, float max) = 0;
 
@@ -18,7 +18,7 @@ protected:
     Material material;
 };
 
-class Sphere : public Surface
+class Sphere : public Shape
 {
 public:
     Sphere();

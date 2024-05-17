@@ -1,26 +1,26 @@
-#include "Surface.hpp"
+#include "Shape.hpp"
 
-Surface::Surface()
+Shape::Shape()
     : transformation(Transformation()), material(Material())
 {
 }
 
-Surface::Surface(Transformation transformation, Material material)
+Shape::Shape(Transformation transformation, Material material)
     : transformation(transformation), material(material)
 {
 }
 
-Surface::~Surface()
+Shape::~Shape()
 {
 }
 
 Sphere::Sphere()
-    : Surface()
+    : Shape()
 {
 }
 
 Sphere::Sphere(Transformation transformation, Material material)
-    : Surface(transformation, material)
+    : Shape(transformation, material)
 {
 }
 

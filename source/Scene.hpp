@@ -2,7 +2,7 @@
 
 #include "Support.hpp"
 #include "Camera.hpp"
-#include "Surface.hpp"
+#include "Shape.hpp"
 #include "Image.hpp"
 
 class Scene
@@ -15,5 +15,5 @@ public:
 
 private:
     std::shared_ptr<Camera> camera;
-    std::vector<std::shared_ptr<Surface>> surfaces;
+    std::vector<std::shared_ptr<Shape>> shapes;
 };
