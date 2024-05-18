@@ -1,15 +1,15 @@
 #include "Camera.hpp"
 
 Camera::Camera()
-    : width(width), height(height), fov(glm::vec2(0.0f)), aspect(0.0f), transformation(Transformation()), matrix(glm::mat4(0.0f))
+    : width(width), height(height), fov(glm::vec2(0.0f)), aspect(0.0f), transform(Transform()), matrix(glm::mat4(0.0f))
 {
 }
 
-Camera::Camera(int width, int height, float fov, Transformation transformation)
-    : width(width), height(height), aspect(float(width) / float(height)), transformation(transformation)
+Camera::Camera(int width, int height, float fov, Transform transform)
+    : width(width), height(height), aspect(float(width) / float(height)), transform(transform)
 {
     this->fov = glm::vec2(float(2 * atan(tan(fov / 2.0f) * aspect)), float(fov));
-    this->matrix = glm::scale(glm::translate(glm::eulerAngleXYZ(transformation.rotate.x, transformation.rotate.y, transformation.rotate.z), transformation.translate), transformation.scale);
+    this->matrix = glm::scale(glm::translate(glm::eulerAngleXYZ(transform.rotate.x, transform.rotate.y, transform.rotate.z), transform.translate), transform.scale);
 }
 
 Camera::~Camera()

@@ -7,7 +7,7 @@ class Camera
 {
 public:
     Camera();
-    Camera(int width, int height, float fov, Transformation transformation);
+    Camera(int width, int height, float fov, Transform transform);
     ~Camera();
 
     Ray CreateRay(int x, int y);
@@ -19,6 +19,6 @@ private:
     glm::vec2 fov;
     float aspect;
 
-    Transformation transformation;
+    Transform transform;
     glm::mat4 matrix;
 };

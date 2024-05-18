@@ -14,13 +14,13 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtx/euler_angles.hpp>
 
-struct Transformation
+struct Transform
 {
     glm::vec3 translate;
     glm::vec3 rotate;
     glm::vec3 scale;
 
-    Transformation();
-    Transformation(glm::vec3 translate, glm::vec3 rotate, glm::vec3 scale);
-    ~Transformation();
+    Transform();
+    Transform(glm::vec3 translate, glm::vec3 rotate, glm::vec3 scale);
+    ~Transform();
 };

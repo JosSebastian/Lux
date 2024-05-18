@@ -1,7 +1,10 @@
 #include "Random.hpp"
 
 Random::Random()
+    : distribution(0.0f, 1.0f)
 {
+    std::random_device random;
+    generator = std::mt19937_64(random());
 }
 
 Random::Random(unsigned long seed)
