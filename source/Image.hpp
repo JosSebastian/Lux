@@ -5,6 +5,9 @@
 class Image
 {
 public:
+    int width;
+    int height;
+
     Image();
     Image(int width, int height, std::string file);
     ~Image();
@@ -13,9 +16,6 @@ public:
     void Render();
 
 private:
-    int width;
-    int height;
-
     int channels;
     std::vector<float> pixels;
 
