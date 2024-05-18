@@ -10,7 +10,7 @@ public:
     Camera(int width, int height, float fov, Transform transform);
     ~Camera();
 
-    Ray CreateRay(int x, int y);
+    Ray CreateRay(int x, int y, bool random);
 
 private:
     int width;

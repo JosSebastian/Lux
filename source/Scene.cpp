@@ -72,7 +72,7 @@ void Scene::Render(std::shared_ptr<Image> image, int samples)
             glm::vec3 color(0.0f);
             for (int s = 0; s < samples; s++)
             {
-                Ray ray = camera->CreateRay(x, y);
+                Ray ray = camera->CreateRay(x, y, true);
                 color += Sample(ray);
             }
             color /= samples;

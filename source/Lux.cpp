@@ -9,7 +9,7 @@ int main(int argc, char const *argv[])
 {
     try
     {
-        std::shared_ptr<Camera> camera = std::make_shared<Camera>(512, 512, glm::radians(60.0f), Transform(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f), glm::vec3(1.0f)));
+        std::shared_ptr<Camera> camera = std::make_shared<Camera>(256, 256, glm::radians(60.0f), Transform(glm::vec3(0.0f, 0.0f, 0.0f), glm::vec3(0.0f), glm::vec3(1.0f)));
         std::vector<std::shared_ptr<Shape>> shapes;
 
         std::shared_ptr<Light> top_material = std::make_shared<Light>(glm::vec3(1.0f));
@@ -28,10 +28,10 @@ int main(int argc, char const *argv[])
         std::shared_ptr<Sphere> bottom = std::make_shared<Sphere>(Transform(glm::vec3(0.0f, -100.0f, -5.0f), glm::vec3(0.0f), glm::vec3(99.5f)), bottom_material);
         shapes.push_back(bottom);
 
-        std::shared_ptr<Image> image = std::make_shared<Image>(512, 512, "image.png");
+        std::shared_ptr<Image> image = std::make_shared<Image>(256, 256, "image.png");
 
         auto scene = Scene(camera, shapes);
-        scene.Render(image, 512);
+        scene.Render(image, 128);
     }
     catch (const std::exception &exception)
     {
