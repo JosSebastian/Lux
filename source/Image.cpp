@@ -23,6 +23,7 @@ void Image::Pixel(int x, int y, glm::vec3 color)
 
     assert(index >= 0);
     assert(3 * index + 2 < (int)pixels.size());
+    color = glm::clamp(color, 0.0f, 1.0f);
 
     pixels.at(3 * index + 0) = color.r;
     pixels.at(3 * index + 1) = color.g;
